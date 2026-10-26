@@ -1,0 +1,518 @@
+url,expected_verdict,acceptable_verdicts,category,source,needs_review,note
+https://cwc.gov.in/en/mission-statement,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://bhagalpur.nic.in/district-election-office/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://hid.gov.in/SBD/Objections-Regarding-Technical-Bids-Approved-By-TAC,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://kvs.gov.in/notice-category/%e0%a4%a8%e0%a4%bf%e0%a4%b5%e0%a4%bf%e0%a4%a6%e0%a4%be%e0%a4%8f%e0%a4%82/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ejalshakti.gov.in/JJM/JJMReports/pr_area/rpt_pr_area_Sambhawpanchayat.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://jkhighcourt.nic.in/roster_archi.php,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://pmkisan.gov.in/Newsletter.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://indianvisaonline.gov.in/visa/visa-on-arrival.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.myscheme.gov.in/disclaimer,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://nimi.gov.in/web/latestnews_viewall.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://pfms.gov.in/Sitepages/Website_Manager.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ntps.nic.in/Public/CheckStatus.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://rgmwb.gov.in/MARREG_Portal/MARREG_Home.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://vcourts.gov.in/virtualcourt/about_us.php,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://hrtransport.gov.in/accounts/AccountsControlSystem.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://kvs.gov.in/hi/%e0%a4%b6%e0%a5%88%e0%a4%95%e0%a5%8d%e0%a4%b7%e0%a4%a3%e0%a4%bf%e0%a4%95-%e0%a4%b8%e0%a4%82%e0%a4%b8%e0%a4%be%e0%a4%a7%e0%a4%a8/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://napix.gov.in/en/discover/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://pesb.gov.in/hi/Home/RTI,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://chandigarh.gov.in/zoning-plans,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ladakh.gov.in/skill-courses/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.mea.gov.in/annual-reports-other-offices,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://pminewyork.gov.in/sitemap,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://chennaicorporation.gov.in/${tomcatExamplesUrl},LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://rtiharyana.gov.in/Home.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.bis.gov.in/consumer-overview/citizen-charter/?lang=hi,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://cbcindia.gov.in/wp-content/themes/boc/Waves_E_booklets/index.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.hyderabadwater.gov.in/en/index.php/services/information-services/guidelines-new-connections,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://tripura.nic.in/events/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ecounselling.nic.in/achievements/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://cuddalore.nic.in/magalirtittam/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://mahatrafficechallan.gov.in/MH-Echallan-Grievance,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.sikkim.gov.in/media/press-release/press-info?name=Press+Note+Women%2c+Child%2c+Senior+Citizens+and+Divyangjan+Welfare+Department%2c+Soreng&id=166003,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ncs.gov.in/NCSReportDashboard,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://hryrevenuecourts.gov.in/frmCaseStatus.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://digitalpolice.gov.in/DigitalPolice/HyperlinkPolicy,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://nhrc.nic.in/flipbook/publication/                                                                                                                37,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://eaindustry.nic.in/indx_download_7071/index_7071.xls,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://surveyofindia.gov.in/pages/maps-services,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://thuna.keralapolice.gov.in/citizen/login.htm?lang=ml_IN&stov=9738-2CYL-YVF9-I84F-8J5Y-QAB2-1TOR-L2M4,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://bda.gov.in/notifications/advertisement,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://apeprocurement.gov.in/go-konugolu.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://dciindia.gov.in/webinar.aspx?NewsType=Webinar,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://asrb.gov.in/privacy-policy,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://hpocmms.nic.in/indCatMaster/forgetPassword,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://fmiscwrdbihar.gov.in/fmis/inundation.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://nidm.mha.gov.in/management_hi.asp,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://attendance.gov.in/assets/doc/BAS_PI_Request_Form.docx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ngdrsgoa.gov.in/NGDRS_GA/Users/feedback,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://rcctvm.gov.in/articledetail/types_of_cancer,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://culture.gov.in/webcast,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://egramswaraj.gov.in/ElectedRepresentativeReportZp.do,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://dpccocmms.nic.in/userMaster/grantedApplicationSearchHWM,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://citizenportal-op.gov.in/Citizen/AboutEmployee.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://sancharsaathi.gov.in/Home/documents.jsp,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ceodelhi.gov.in/ElectorsStatistics.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://odishafarmmachinery.nic.in/bookingSchedule2026-27.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://kanpurnagar.nic.in/notice/regarding-csc-4-0-rfp/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://beeindia.gov.in/WriteReadData/L45218/2669378792339370.docx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://agra.nic.in/urban-local-bodies-3/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://apsc.nic.in/downloads.php,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://panchayat.gov.in/%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%a4%e0%a4%bf%e0%a4%95%e0%a5%8d%e0%a4%b0%e0%a4%bf%e0%a4%af%e0%a4%be/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://internship.mponline.gov.in/Portal/Internship3.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://py.gov.in/videogallery,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://dic.gov.in/help/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://uppbpb.gov.in/Home/PACLogin,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://megedistrict.gov.in/resources/homePage/17/services.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://citizenportal-op.gov.in/Citizen/AboutLostProperty.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://bhagalpur.nic.in/document-category/office-order/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://rashtrapatibhavan.gov.in/amarta-udayaana,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://mybharat.gov.in/pages/support,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://indianembassyberlin.gov.in/Announcements,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://onos.gov.in/how-to-access,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://gpdp.nic.in/bpdpApprovedReport.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://agriharyana.gov.in/mechschemedashboard,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://eservices.dot.gov.in/copyright-policy,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://meghalaya.gov.in/key-contacts/council-of-ministers,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.mea.gov.in/virtual-meetings,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://eg4.nic.in/howtologin.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://apgenco.gov.in/Main/page/3/89,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ossc.gov.in/Public/Pages/View_Content.aspx?id=Awbj8h4cUqgYGVMR/o6A6w==,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://nfsa.gov.in/public/nfsadashboard/PublicDBTDashboard.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.ncw.gov.in/notifications/gazette-notification/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ipgmer.gov.in/privacy-policy,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://megedistrict.gov.in/resources/homePage/17/contactus.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://erp.mphc.gov.in/add_student,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://haryanafood.gov.in/sitemap/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://aerb.gov.in/hindi/about-us-hi/constitution-order-hi,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://rtionline.gov.in/login.php,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://gstcouncil.gov.in/en/disclaimer,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://hpocmms.nic.in/SPCB_DOCUMENTS/Himachal.docx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://investodisha.gov.in/policy-framework/sectoral-policies/odisha-psp-policy-2025,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://jkssb.nic.in/BoardConstitution.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://gujaratindia.gov.in/Home/Art-Culture-Lifestyle,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://nfc.gov.in/nfc-payments.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ceotelangana.nic.in/mlc2025.html,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://apct.gov.in/feedback,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://jharkhand.gov.in/Login/Citizenlogout,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://kanpurnagar.nic.in/dmf/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.dvet.gov.in/en/swachata-abhiyan-2025/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://hamraazmp8.gov.in/Forgot_pas_P.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://korba.gov.in/%e0%a4%aa%e0%a4%b0%e0%a5%8d%e0%a4%af%e0%a4%9f%e0%a4%a8/%e0%a4%86%e0%a4%b5%e0%a4%be%e0%a4%b8-%e0%a4%b9%e0%a5%8b%e0%a4%9f%e0%a4%b2-%e0%a4%b0%e0%a4%bf%e0%a4%b8%e0%a5%8b%e0%a4%b0%e0%a5%8d%e0%a4%9f-%e0%a4%a7%e0%a4%b0%e0%a5%8d%e0%a4%ae%e0%a4%b6%e0%a4%be/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://fitindia.gov.in/help,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://uppbpb.gov.in/Home/Contact,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://rcctvm.gov.in/articledetail/Library_and_Information_Services,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://himatithi.nic.in/pwd/RHBS_BookingRequest.aspx?dept_cd=96a3be3cf272e017046d1b2674a52bd3,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://sancharsaathi.gov.in/Home/web-information-manager.jsp,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ecourts.gov.in/ecourts2.0//?p=about_us/newsletter,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://rtionline.gov.in/Contactus.php,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://notary.gov.in/contact-us,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://oirms-ir.gov.in/forget_password.php,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.dgca.gov.in/digigov-portal/assets/DGCA/rajbhasha/rajbhasha.jsp,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ksb.gov.in/newsdetail.htm?190,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://meeseva.gov.in/IMeeSeva2/UserInterface/SuggestionGrievance.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://inspireawards-dst.gov.in/UserP/ATLSearch.aspx,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://doptcirculars.nic.in/HindiCircular.aspx?Circular=N,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://approval-permission-dgms.gov.in/Login/MineUser,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://imports.gov.in/IMS/index,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://haryanaforest.gov.in/annual-plan-operationsapos/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ahcikhulna.gov.in/gallery?id=eyJpdiI6IjNYYzNJTTdXb1F4ZlBUZjk3NVZiU0E9PSIsInZhbHVlIjoiY2RBTDJGTDNOMzEwRytmZ3BsVFh1QT09IiwibWFjIjoiMDc3MTliYzhhNWY1ZWVkMzhiYTkzNWEzMTNjOWIwMWNhNTYzYjU4YzMyOTgxMmZiZWExYTJlZTcyNjAyZDVjZSJ9,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://sanskrit.nic.in/about_us.php,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://ibbi.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://bsi.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://rtionline.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.goa.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://patna.nic.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://jashpur.nic.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://gujaratindia.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://esic.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://howrah.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://mpurban.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://tmis-mohfw.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://nmcnagpur.gov.in/??? ?????? ??????,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.kheloindia.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://www.hciabuja.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://tgeapcetb.nic.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://haryanafood.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://intrahry.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://pesb.gov.in?lang=en,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://assamegras.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://begusarai.nic.in/?post_type=document&p=35726,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://egazette.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://online-inspire.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://cga.nic.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://e-mpeda.nic.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://boi.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://spark.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://haryanaforest.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://jpsc.gov.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://patna.nic.in/?post_type=document&p=44818,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+https://odisharevenueservices.nic.in/,LEGIT_GOV,LEGIT_GOV,real_gov,crawl,False,
+HTTPS://UIDAI.GOV.IN/,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+https://uidai.gov.in./,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+https://uidai.gov.in:443/,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+HTTPS://INCOMETAX.GOV.IN/,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+https://incometax.gov.in./,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+https://incometax.gov.in:443/,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+HTTPS://EPFINDIA.GOV.IN/,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+https://epfindia.gov.in./,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+https://epfindia.gov.in:443/,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+HTTPS://DIGILOCKER.GOV.IN/,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+https://digilocker.gov.in./,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+https://digilocker.gov.in:443/,LEGIT_GOV,LEGIT_GOV,real_gov_variant,handwritten,False,
+https://emparivahan.top/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometax-login.org,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://eaadhar.cfd/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://irctc-link.co.in/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://ertionline.top,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://irctc-gov.cc/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometax-gov.in/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://rtionline-gov-in.buzz/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://aadhar-apply.site/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://umang-india.com/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://parivahanrefund.click/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://parivahan-online.shop/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://verify-india.org/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://mparivahan-online.cc/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://irctc-india.shop/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://nvsp-online.cfd/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://portal-nvsp.top/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epmkisan.buzz/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://kyc-gst.net/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://parivahan-gov-in.icu/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://aadhar-online.icu/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://umang-gov.cc/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://kyc-digilocker.online/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://digilocker-online.co.in/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://parivahanupdate.cc/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://rtionlinelogin.org/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://eirctc.icu/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://envsp.top/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epfindiastatus.lol/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://aadhaar-verify.co.in/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometax-login.cfd/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://mygov-gov.buzz/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://incometax-online.com/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://parivahanverify.lol/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://nvspportal.org/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://cowinlogin.in/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://check-parivahan.info/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://gst-gov-in.in/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://india-gov-in.click/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epfindia-online.buzz,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://passportindia-gov.site/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://login-gst.click/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://nvsp-india.site/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://india-online.buzz/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://mygov-gov-in.net/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://emparivahan.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epfokyc.xyz/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://pmkisansupport.net/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://irctcdownload.xyz/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://cowinportal.cc/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://uidai-gov-in.live/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://emparivahan.sbs/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epmkisan.org/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometaxindia-download.com/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://uidaisupport.online/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://portal-india.in/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://cowin-online.lol/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://epfindia-claim.lol/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://support-uidai.com/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://cowin-gov-in.info/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://irctc-online.org/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://passportindia-gov-in.com/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometax-online.shop/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://umang-gov-in.live/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://gst-gov.sbs/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometax-online.online/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://eumang.shop/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://login-gst.buzz/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://irctc-online.xyz/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://cowin-gov.org/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://verify-digilocker.info,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epfoclaim.cc/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometaxindia-online.shop/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://aadhaarsupport.cc/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://check-uidai.info/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://digilocker-gov.lol,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://emparivahan.info,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://cowin-gov-in.lol/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://aadhaar-gov-in.live/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epfindia-online.org/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://gst-support.info,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://uidai-gov-in.org/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://epmkisan.net/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://parivahan-gov-in.click/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometaxindia-india.top,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://aadhar-gov.cc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://eaadhar.org/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://digilocker-gov.top/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epfo-online.xyz/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://mparivahan-india.click/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epfindialogin.xyz/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://aadhar-gov.org/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://cowin-support.cfd/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometaxindia-link.icu/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://parivahan-gov-in.cfd/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://mygov-india.net/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://indiacheck.top/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://incometaxindia-download.co.in/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://uidaiupdate.buzz/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://pmkisan-download.xyz/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://passportindia-online.cfd/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://aadhar-online.info/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://digilocker-gov-in.click/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://mygov-online.live/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://epfindiaverify.shop/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://indiaapply.xyz,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://claim-nvsp.site/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://cowin-online.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://irctc-gov.cfd,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+http://status-parivahan.org/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic,False,
+https://digiocker.lol,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+http://epfinia.info/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://epfinddia.live/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://aprivahan.cfd/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+http://passsportindia.top/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://paspsortindia.info/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://uiadi.xyz/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://parivhan.click/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+http://udiai.online/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://parivahann.buzz/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://uida.icu/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://udai.live/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://aadhaarr.xyz/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://passportinida.lol/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://epfindi4.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://uidaii.com,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://idai.online/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://incmoetax.buzz/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://parivahhan.org/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://passportlndia.com/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://aahaar.org,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://parivahann.shop/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+http://inncometax.in/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://efpindia.org,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://incometaxx.lol/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://aaadhaar.online,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://uidaai.cfd,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://parivahn.site/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://udai.org,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://diilocker.lol/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://incometa.live/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://uiadi.org/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://aadhar.site/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://incometaxx.sbs/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://pssportindia.lol/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+http://incomet4x.cc/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://parivaha.online,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://digiloccker.info/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://digilokcer.net/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://epfndia.sbs/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://uidaii.icu/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://aprivahan.net/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://incoetax.sbs/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://pariahan.org/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://parivahann.sbs/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_typo,False,
+https://aadhaar-online.vercel.app/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://link-aadhaar.web.app/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://parivahan-gov.netlify.app/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://aadhaar-login.wixstudio.com/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://rtionline-download.firebaseapp.com/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://status-mygov.web.app/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://rtionlinecheck.weebly.com/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://incometax-online.pages.dev,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://umang-update.firebaseapp.com/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://incometax-online.web.app/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://digilockerstatus.web.app/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://aadhar-online.weebly.com,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://aadhaar-update.web.app/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://parivahanclaim.weebly.com/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://gst-online.weebly.com/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://incometaxlogin.wixstudio.com/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://pmkisan-india.netlify.app,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://india-india.web.app/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://eparivahan.pages.dev/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://mygov-gov-in.weebly.com,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://mparivahan-gov.wixstudio.com/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://aadhaarclaim.vercel.app/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://login-nvsp.weebly.com/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://digilocker-claim.wixstudio.com/verify,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://passportindia-apply.wixstudio.com/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://aadhar-india.firebaseapp.com/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://rtionline-gov.github.io/portal/login.php,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://rtionline-gov-in.pages.dev/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://epfo-gov.github.io/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://cowin-gov-in.web.app/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://incometax-online.firebaseapp.com/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://india-india.netlify.app/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://aadhaar-online.pages.dev/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://umang-online.vercel.app,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://mparivahanrefund.wixstudio.com,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://aadhaar-india.weebly.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://eindia.firebaseapp.com/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://mparivahan-gov-in.firebaseapp.com/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://pmkisan-india.pages.dev/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://aadhaar-india.web.app,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://passportindia-online.web.app/login,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://mparivahan-support.pages.dev/aadhaar/update,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://status-rtionline.weebly.com/kyc,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+http://link-passportindia.github.io/status?id=482913,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://epfo-gov-in.vercel.app/claim,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,synthetic_platform,False,
+https://incometaxrefund.wixstudio.com/feat,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,phishtank_real,True,real PhishTank URL; confirm it targets an Indian service
+https://gr-mygov.web.app/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,phishtank_real,True,real PhishTank URL; confirm it targets an Indian service
+https://gr-mygov.firebaseapp.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,lookalike,phishtank_real,True,real PhishTank URL; confirm it targets an Indian service
+https://uidai.gov.in.secure034.xyz/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://secure034.com/uidai.gov.in/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://uidai.gov.in@secure034.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://uidai-gov-in.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://gov.in-support.top/uidai,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+http://uidai.gov.in.secure034.com:8080/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://uidai.gov.in.secure034.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://xn--udai-lza.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic_punycode,False,
+https://incometax.gov.in.secure114.xyz/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://secure114.com/incometax.gov.in/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://incometax.gov.in@secure114.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://incometax-gov-in.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://gov.in-kyc.top/incometax,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+http://incometax.gov.in.secure114.com:8080/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://incometax.gov.in.secure114.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://xn--ncometax-skb.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic_punycode,False,
+https://epfindia.gov.in.secure238.xyz/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://secure238.com/epfindia.gov.in/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://epfindia.gov.in@secure238.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://epfindia-gov-in.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://gov.in-verify.top/epfindia,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+http://epfindia.gov.in.secure238.com:8080/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://epfindia.gov.in.secure238.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://xn--epfndia-tfb.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic_punycode,False,
+https://digilocker.gov.in.secure389.xyz/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://secure389.com/digilocker.gov.in/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://digilocker.gov.in@secure389.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://digilocker-gov-in.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://gov.in-login.top/digilocker,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+http://digilocker.gov.in.secure389.com:8080/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://digilocker.gov.in.secure389.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://xn--dgilocker-vpb.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic_punycode,False,
+https://passportindia.gov.in.secure427.xyz/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://secure427.com/passportindia.gov.in/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://passportindia.gov.in@secure427.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://passportindia-gov-in.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://gov.in-support.top/passportindia,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+http://passportindia.gov.in.secure427.com:8080/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://passportindia.gov.in.secure427.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://xn--passportndia-84b.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic_punycode,False,
+https://parivahan.gov.in.secure567.xyz/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://secure567.com/parivahan.gov.in/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://parivahan.gov.in@secure567.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://parivahan-gov-in.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://gov.in-verify.top/parivahan,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+http://parivahan.gov.in.secure567.com:8080/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://parivahan.gov.in.secure567.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://xn--parvahan-vkb.com/,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic_punycode,False,
+https://gst.gov.in.secure659.xyz/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://secure659.com/gst.gov.in/login,PHISHING_GOV,PHISHING_GOV|PHISHING,structural_trick,synthetic,False,
+https://www.usps.com/search/results.htm?PNO=1&keyword=Passports,LEGIT,LEGIT|SUSPICIOUS,hard_negative,dataset_crawl,False,real crawled legit URL with gov keyword
+https://skycdp.com/,LEGIT,LEGIT|SUSPICIOUS,hard_negative,dataset_crawl,False,real crawled legit URL with gov keyword
+https://passport.com/,LEGIT,LEGIT|SUSPICIOUS,hard_negative,dataset_crawl,False,real crawled legit URL with gov keyword
+https://passport.aizhs.com/reg.html?appid=10&areaid=1&target=iframe&ticket=1&auto=1&autotime=30&returnUrl=https%3A%2F%2Faizhs.com,LEGIT,LEGIT|SUSPICIOUS,hard_negative,dataset_crawl,False,real crawled legit URL with gov keyword
+https://economictimes.indiatimes.com/prime/kyb-and-kyc-business-behind-the-wealth-creator-called-divis-lab-part-1/primearticleshow/135126377.cms?source=homepage&medium=prime_exclusives_header&campaign=prime_discovery,LEGIT,LEGIT|SUSPICIOUS,hard_negative,dataset_crawl,False,real crawled legit URL with gov keyword
+https://www.dailynews.com/voter-guide/?utm_source=homewidget,LEGIT,LEGIT|SUSPICIOUS,hard_negative,dataset_crawl,False,real crawled legit URL with gov keyword
+https://www.news18.com/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.thehindu.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.quora.com/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.indiatoday.in/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://cleartax.in/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://indianexpress.com/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.bankbazaar.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.news18.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.news18.com/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.sbi.co.in/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.phonepe.com/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.axisbank.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.zeebiz.com/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.business-standard.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.firstpost.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://groww.in/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.business-standard.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.policybazaar.com/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.firstpost.com/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.livemint.com/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://medium.com/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.financialexpress.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.policybazaar.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://en.wikipedia.org/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.icicibank.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://paytm.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.icicibank.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://medium.com/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://groww.in/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://timesofindia.indiatimes.com/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.zeebiz.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.zeebiz.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.zeebiz.com/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://indianexpress.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.ndtv.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.moneycontrol.com/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.flipkart.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.phonepe.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.hindustantimes.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.hindustantimes.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.business-standard.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.policybazaar.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.amazon.in/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://en.wikipedia.org/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.flipkart.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.thehindu.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://cleartax.in/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://groww.in/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.axisbank.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.financialexpress.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://economictimes.indiatimes.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.financialexpress.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://economictimes.indiatimes.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://economictimes.indiatimes.com/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.policybazaar.com/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.bankbazaar.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.firstpost.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://medium.com/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.hindustantimes.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.thehindu.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://groww.in/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.bankbazaar.com/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://paytm.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://timesofindia.indiatimes.com/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.flipkart.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.hdfcbank.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.sbi.co.in/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.hindustantimes.com/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://indianexpress.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://taxguru.in/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.moneycontrol.com/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.axisbank.com/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://timesofindia.indiatimes.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.amazon.in/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.quora.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.quora.com/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.hindustantimes.com/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.flipkart.com/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://medium.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://taxguru.in/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.livemint.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://economictimes.indiatimes.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://economictimes.indiatimes.com/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.quora.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.bankbazaar.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.icicibank.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.axisbank.com/passport-seva-appointment-tips,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://en.wikipedia.org/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://groww.in/kyc-update-bank-account,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.indiatoday.in/news/aadhaar-update-last-date,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.flipkart.com/income-tax-return-filing-guide,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.indiatoday.in/how-to-link-pan-aadhaar,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://timesofindia.indiatimes.com/epfo-pf-withdrawal-rules,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.zeebiz.com/gst-return-due-dates,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten_unverified,False,"real site, plausible path; page may not exist - tests keyword false positives only"
+https://www.google.com/search?q=aadhaar+update,LEGIT,LEGIT|SUSPICIOUS,hard_negative,handwritten,False,
+https://www.irctc.co.in/,LEGIT,LEGIT|LEGIT_GOV,hard_negative,handwritten,True,official but not on gov.in; needs allowlist entry

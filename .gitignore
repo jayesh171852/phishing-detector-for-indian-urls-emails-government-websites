@@ -1,0 +1,15 @@
+.venv
+node_modules
+__pycache__
+catboost_info/
+_quarantine/
+extension/build/
+extension/.plasmo/
+extension/node_modules/
+.env
+extension/.env
+*.cbm
+*.onnx
+*.csv
+*.csv.*
+!data/reference/*.csv

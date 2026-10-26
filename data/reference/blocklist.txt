@@ -1,0 +1,6 @@
+# Blocklist of known phishing or malicious URLs
+# Each line should contain a full URL or domain to block.
+# Example entries:
+phishing.example.com
+malicious-site.org
+# Add more entries as needed.
