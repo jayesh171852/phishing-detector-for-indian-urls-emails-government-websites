@@ -87,7 +87,7 @@ Files: background service worker, contents/gmail.ts and contents/outlook.ts, pop
 | 0 — Setup | VERIFIED | check_data.py passed (all checks OK, see Phase R run output) |
 | 1 — URL features | VERIFIED | verify_features.py passed (21 features, correct order, 1000 URLs < 5s, see Phase R run output) |
 | 2 — URL training | FILES PRESENT BUT UNVERIFIED | eval_report.md and thresholds.json exist; training not re-run in this session |
-| 3 — Government verifier | NOT STARTED | government/ directory is empty |
+| 3 — Government verifier | VERIFIED | 21/21 pytest tests pass; eval_gov.py: real_gov 100%, real_gov_variant 100%, structural_trick 98%, lookalike 84.7%, hard_negative 68.6% (NONE = correct fall-through); 0 of top-5,000 Tranco domains flagged PHISHING_GOV |
 | 4 — Email model | NOT STARTED | baseline.py and evaluate.py were corrupted; no email training code |
 | 5 — Backend | NOT STARTED | backend/app/main.py was corrupted; no /v1/* routes exist |
 | 6 — Extension | PARTIAL | Extension compiled to build/chrome-mv3-dev/; calls endpoints that don't exist yet |
