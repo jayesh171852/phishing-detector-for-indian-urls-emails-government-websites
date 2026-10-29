@@ -2,10 +2,12 @@ import os
 print('=== URL Model Training Started ===')
 import sys
 import json
+import joblib
 import pandas as pd
 import numpy as np
 from pathlib import Path
 from catboost import CatBoostClassifier, Pool
+from sklearn.isotonic import IsotonicRegression
 
 from sklearn.metrics import (
     precision_score,
@@ -21,7 +23,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.append(str(PROJECT_ROOT))
 
 from ml.shared.config import DATA_DIR
-from ml.url_model.features import extract_features
+from ml.url_model.features import bucket_tld, extract_features, top_tlds
 
 # Paths
 TRAIN_CSV = Path(DATA_DIR) / "train_urls.csv"
@@ -29,6 +31,9 @@ OUTPUT_DIR = Path(__file__).resolve().parent / "artifacts"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 MODEL_PATH = OUTPUT_DIR / "url_model.cbm"
 THRESHOLDS_PATH = OUTPUT_DIR / "thresholds.json"
+FEATURE_NAMES_PATH = OUTPUT_DIR / "feature_names.json"
+TLD_VOCABULARY_PATH = OUTPUT_DIR / "tld_vocabulary.json"
+CALIBRATOR_PATH = OUTPUT_DIR / "calibrator.joblib"
 REPORT_PATH = Path(__file__).resolve().parent / "eval_report.md"
 
 # Load data
@@ -53,7 +58,14 @@ y_test  = test_df["label"].values
 
 y_gov_test = gov_test_df["label"].values
 
-# Ensure the TLD column is treated as categorical (string) for CatBoost
+# Fit the TLD vocabulary on train only and map all other values to "other".
+tld_vocabulary = top_tlds(X_train["tld"].tolist())
+for df_feat in [X_train, X_val, X_test, X_gov_test]:
+    df_feat["tld"] = df_feat["tld"].map(
+        lambda value: bucket_tld(value, tld_vocabulary)
+    )
+
+# Ensure the TLD column is treated as categorical (string) for CatBoost.
 for df_feat in [X_train, X_val, X_test, X_gov_test]:
     df_feat["tld"] = df_feat["tld"].astype(str)
 
@@ -79,14 +91,19 @@ val_pool   = Pool(data=X_val,   label=y_val,   cat_features=cat_feature_idx)
 model.fit(train_pool, eval_set=val_pool, use_best_model=True)
 print('Model training completed')
 
-# Calibration on validation set – isotonic (5‑fold CV) using combined train+val
+# Fit calibration on validation predictions only.
+val_raw_probs = model.predict_proba(val_pool)[:, 1]
+calibrator = IsotonicRegression(out_of_bounds="clip")
+calibrator.fit(val_raw_probs, y_val)
 
-
-# Save CatBoost model (the raw model; calibrated probabilities are obtained via calibrator)
+# Save model and inference metadata.
 model.save_model(str(MODEL_PATH))
+joblib.dump(calibrator, CALIBRATOR_PATH)
+FEATURE_NAMES_PATH.write_text(json.dumps(list(X_train.columns), indent=2), encoding="utf-8")
+TLD_VOCABULARY_PATH.write_text(json.dumps(tld_vocabulary, indent=2), encoding="utf-8")
 
-# Determine thresholds on validation set (still using original X_val for thresholds)
-val_probs = model.predict_proba(val_pool)[:, 1]
+# Determine thresholds on calibrated validation probabilities.
+val_probs = calibrator.predict(val_raw_probs)
 print('Validation probabilities computed')
 # PHISHING threshold – max prob such that false‑positive rate <= 1% on legit (label 0)
 legit_mask = y_val == 0
@@ -111,16 +128,15 @@ with open(THRESHOLDS_PATH, "w", encoding="utf-8") as f:
     json.dump(thresholds, f, indent=2)
 
 # Evaluation on test split using encoded test data
-test_probs = model.predict_proba(X_test)[:, 1]
+test_raw_probs = model.predict_proba(X_test)[:, 1]
+test_probs = calibrator.predict(test_raw_probs)
 print('Test probabilities computed')
 pred_phish = (test_probs >= phishing_thr).astype(int)
 pred_susp  = (test_probs >= suspicious_thr).astype(int)
 
 # Gov-test evaluation using encoded gov_test data
-gov_probs = model.predict_proba(X_gov_test)[:, 1]
-
-# Save CatBoost model (the raw model; calibrated probabilities are obtained via calibrator)
-model.save_model(str(MODEL_PATH))
+gov_raw_probs = model.predict_proba(X_gov_test)[:, 1]
+gov_probs = calibrator.predict(gov_raw_probs)
 
 
 
@@ -145,7 +161,7 @@ with open(REPORT_PATH, "w", encoding="utf-8") as report:
     report.write(str(confusion_matrix(y_test, pred_susp)))
     report.write("```\n\n")
     report.write("## Gov‑test false‑positives (sample)\n")
-    gov_probs = model.predict_proba(X_gov_test)[:, 1]
+    gov_probs = calibrator.predict(gov_raw_probs)
     fp_mask = (gov_probs >= phishing_thr) & (y_gov_test == 0)
     fp_positions = np.where(fp_mask)[0][:20]
     if fp_positions.size > 0:

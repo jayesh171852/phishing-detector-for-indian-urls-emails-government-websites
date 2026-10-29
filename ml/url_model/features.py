@@ -1,13 +1,14 @@
-import os
 import re
 import math
 import pandas as pd
 from urllib.parse import urlparse
 import tldextract
 from collections import Counter
+from typing import Iterable
 
-# Load DATA_DIR from environment (same default as config)
-DATA_DIR = os.getenv('DATA_DIR', r'C:\\Users\\jayes\\OneDrive\\Desktop\\pbl sem 5\\new')
+from ml.shared.config import DATA_DIR
+
+TOP_TLD_COUNT = 50
 
 # Keyword list for counting in URLs
 KEYWORDS = [
@@ -52,6 +53,18 @@ def keyword_count(url_norm: str) -> int:
 
 def is_shortener(domain: str) -> bool:
     return domain.lower() in SHORTENER_DOMAINS
+
+
+def top_tlds(values: Iterable[str], limit: int = TOP_TLD_COUNT) -> list[str]:
+    """Return the most frequent non-empty TLD values in deterministic order."""
+    counts = Counter(str(value).lower() for value in values if str(value))
+    return [value for value, _ in sorted(counts.items(), key=lambda item: (-item[1], item[0]))[:limit]]
+
+
+def bucket_tld(value: str, vocabulary: Iterable[str]) -> str:
+    """Keep only training-vocabulary TLDs; map all others to ``other``."""
+    value = str(value).lower()
+    return value if value in vocabulary else "other"
 
 def extract_features(df: pd.DataFrame) -> pd.DataFrame:
     """Given a DataFrame with a ``url_norm`` column, return a DataFrame of engineered features.

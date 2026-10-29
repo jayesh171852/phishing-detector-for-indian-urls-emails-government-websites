@@ -1,6 +1,7 @@
 import json
 import pathlib
 from typing import Literal
+import joblib
 
 import pandas as pd
 from fastapi import FastAPI, HTTPException
@@ -11,17 +12,25 @@ from catboost import CatBoostClassifier
 PROJECT_ROOT = pathlib.Path(__file__).resolve().parents[2]
 MODEL_PATH = PROJECT_ROOT / "ml" / "url_model" / "artifacts" / "url_model.cbm"
 THRESHOLDS_PATH = PROJECT_ROOT / "ml" / "url_model" / "artifacts" / "thresholds.json"
+FEATURE_NAMES_PATH = PROJECT_ROOT / "ml" / "url_model" / "artifacts" / "feature_names.json"
+TLD_VOCABULARY_PATH = PROJECT_ROOT / "ml" / "url_model" / "artifacts" / "tld_vocabulary.json"
+CALIBRATOR_PATH = PROJECT_ROOT / "ml" / "url_model" / "artifacts" / "calibrator.joblib"
 
 # Load model and thresholds at startup
 model = CatBoostClassifier()
 model.load_model(str(MODEL_PATH))
 with open(THRESHOLDS_PATH, "r", encoding="utf-8") as f:
     thresholds = json.load(f)
+with open(FEATURE_NAMES_PATH, "r", encoding="utf-8") as f:
+    feature_names = json.load(f)
+with open(TLD_VOCABULARY_PATH, "r", encoding="utf-8") as f:
+    tld_vocabulary = json.load(f)
+calibrator = joblib.load(CALIBRATOR_PATH)
 phishing_thr = thresholds["phishing_threshold"]
 suspicious_thr = thresholds["suspicious_threshold"]
 
 # Import feature extraction and normalisation
-from ml.url_model.features import extract_features
+from ml.url_model.features import bucket_tld, extract_features
 from ml.shared.normalisation import norm
 
 app = FastAPI(
@@ -55,9 +64,17 @@ def predict(req: PredictRequest):
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Feature extraction failed: {e}")
     # Ensure categorical column is string (CatBoost expects this)
-    features["tld"] = features["tld"].astype(str)
+    features["tld"] = features["tld"].map(
+        lambda value: bucket_tld(value, tld_vocabulary)
+    ).astype(str)
+    if list(features.columns) != feature_names:
+        raise HTTPException(status_code=503, detail="Extractor feature manifest mismatch")
+    model_features = list(getattr(model, "feature_names_", []))
+    if model_features and model_features != feature_names:
+        raise HTTPException(status_code=503, detail="Saved model feature manifest mismatch")
     # Obtain probability of the positive class (phishing)
-    prob = model.predict_proba(features)[:, 1][0]
+    raw_prob = model.predict_proba(features)[:, 1]
+    prob = float(calibrator.predict(raw_prob)[0])
     phishing_label = int(prob >= phishing_thr)
     suspicious_label = int(prob >= suspicious_thr)
     message = (
