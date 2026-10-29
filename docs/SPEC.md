@@ -80,35 +80,123 @@ Files: background service worker, contents/gmail.ts and contents/outlook.ts, pop
 7. Gmail/Outlook web content scripts and email scanning with opt-in. Done when: opening a test email shows the banner and marks risky links.
 8. Optional async enrichment (WHOIS, DNS, SSL, HTML) shown as evidence only, then a hand‑labeled final test set with at least 30 items in each of the six categories (phishing site, legit site, phishing gov site, legit gov site, phishing email, legit email), accuracy reported per category, and the README.
 
-## Progress log
+## Progress log and handoff
 
-| Phase | Status | Evidence |
-|-------|--------|---------|
-| 0 — Setup | VERIFIED | check_data.py passed (all checks OK, see Phase R run output) |
-| 1 — URL features | VERIFIED | verify_features.py passed (21 features, correct order, 1000 URLs < 5s, see Phase R run output) |
-| 2 — URL training | FILES PRESENT BUT UNVERIFIED | eval_report.md and thresholds.json exist; training not re-run in this session |
-| 3 — Government verifier | VERIFIED | 21/21 pytest tests pass; eval_gov.py: real_gov 100%, real_gov_variant 100%, structural_trick 98%, lookalike 84.7%, hard_negative 68.6% (NONE = correct fall-through); 0 of top-5,000 Tranco domains flagged PHISHING_GOV |
-| 4 — Email model | NOT STARTED | baseline.py and evaluate.py were corrupted; no email training code |
-| 5 — Backend | NOT STARTED | backend/app/main.py was corrupted; no /v1/* routes exist |
-| 6 — Extension | PARTIAL | Extension compiled to build/chrome-mv3-dev/; calls endpoints that don't exist yet |
-| 7 — Gmail/Outlook | PARTIAL | Content scripts present; depends on missing email endpoint |
-| 8 — Async enrichment | NOT STARTED | |
+Last updated: 2026-10-29 22:34:32 +05:30; audit base commit bbf77e6; handoff edit is uncommitted.
 
-### Quarantined files (Phase R)
-The following files were corrupted (contained shell-redirect artifacts) and moved to _quarantine/:
-- ml/url_model/train.py → _quarantine/train.py
-- ml/email_model/baseline.py → _quarantine/baseline.py
-- ml/email_model/evaluate.py → _quarantine/evaluate.py
-- ml/shared/email_clean.py → _quarantine/email_clean.py
-- backend/app/main.py → _quarantine/main.py
-- backend/app/schemas.py → _quarantine/schemas.py
-- backend/app/services/__init__.py → _quarantine/services__init__.py
-- README.md → _quarantine/README_corrupted.md
+### How to resume in a new IDE or agent
+1. Open `C:\Users\jayes\OneDrive\Desktop\project sem 5\AI-GovShield` as the workspace.
+2. Set `DATA_DIR` if the data moves; current value is `C:\Users\jayes\OneDrive\Desktop\project sem 5\new`.
+3. Activate the environment: `& ".venv\Scripts\Activate.ps1"`.
+4. Paste this to the agent: "Read docs/SPEC.md fully, especially Progress log and handoff. Follow Rules for the agent. Do only the task named under Next action. Paste raw terminal output and stop."
 
-### Known issues
-- 9 gov_test URLs with xn-- (Punycode) hosts flagged by ML model with probability > 0.998 (false positives); the government verifier (Phase 3) will handle these correctly once built.
-- artifacts_all/ directory has unknown provenance — no script in the current codebase creates it; it may have been trained on a different data split.
-- Extension was built early (build/chrome-mv3-dev/ exists) and calls /government-check, /explain, /predict-email endpoints that do not exist yet.
-- DATA_DIR contains a stray url_model.cbm with unknown origin; MD5 confirms it is identical to artifacts/url_model.cbm (B8CFDFC457A1B0B38061F33B56BEC322); no current script writes to DATA_DIR.
+### Environment facts
+- System and `.venv` Python: 3.13.2.
+- Key packages: catboost 1.2.10, shap 0.54.1, scikit-learn 1.9.1, pandas 3.1.0, numpy 2.5.4, fastapi 0.162.0, uvicorn 0.54.0, pydantic 2.14.1, transformers 5.20.2, onnxruntime 1.31.0, pytest 9.1.1, httpx 0.28.1.
+- Torch: 2.14.1+cpu; CUDA version `None`; `torch.cuda.is_available()` is `False`.
+- GPU visible to `nvidia-smi`: NVIDIA GeForce RTX 4050 Laptop GPU, 6141 MiB, driver 621.01.
+- C: free space reported: 294,203,031,552 bytes.
+- REPO and `.venv` are both under OneDrive: `C:\Users\jayes\OneDrive\Desktop\project sem 5\AI-GovShield`.
+
+### Phase table
+
+| Phase | Status | Evidence from this audit | What is still needed |
+|---|---|---|---|
+| R | FILES PRESENT BUT UNVERIFIED | Commit `6862e0c` is named Phase R; AST found `train_modernbert.py` invalid. | Repair/verify the foundation only under an approved Phase R task. |
+| 0 | VERIFIED | `check_data.py`: `ALL CHECKS PASSED`. | Keep the validated data contract unchanged. |
+| 1 | PARTIAL | Feature list printed all 21 names and extraction took `1.49s`; script then failed with `UnicodeEncodeError` in the example-row output. | Make the check complete on Windows and paste a passing run. |
+| 2 | FILES PRESENT BUT UNVERIFIED | `eval_report.md` and `thresholds.json` exist; no training run was made in this audit. | Implement missing training requirements, rerun, and verify the report. |
+| 3 | FILES PRESENT BUT UNVERIFIED | `pytest -q`: `21 passed in 4.04s`; `eval_gov.py` was not run because it is outside the permitted audit commands. | Run the approved Phase 3 evaluation and confirm its target table. |
+| 4 | PARTIAL | Baseline report exists with metrics; ModernBERT script AST fails at line 342. | Make both scripts parse and produce the required random, source-held-out, golden, ham/spam, and latency results. |
+| 5 | NOT STARTED | `backend/app/main.py` is an 89-byte quarantine placeholder; routes directory contains only `__init__.py`; no `/v1/*` tokens found. | Implement API, fusion, SHAP, loader assertion, and e2e tests. |
+| 6 | PARTIAL | Extension source and `build/chrome-mv3-dev/` exist; no browser verification was run. | Wire real endpoints, narrow permissions, and perform the Chrome Done-when test. |
+| 7 | PARTIAL | Gmail and Outlook extractor files exist; email API is absent. | Complete opt-in email flow and verify a test email. |
+| 8 | NOT STARTED | No enrichment or final hand-labeled test evidence was found. | Implement optional evidence-only enrichment and the final six-category evaluation. |
+
+Completion arithmetic: Phase 0 `5%` + Phase 1 `10% / 2 = 5%` + Phase 2 `15% / 2 = 7.5%` + Phase 3 `15% / 2 = 7.5%` + Phase 4 `15% / 2 = 7.5%` + Phase 5 `0%` + Phase 6 `10% / 2 = 5%` + Phase 7 `10% / 2 = 5%` + Phase 8 `0%` = **37.5%**.
+
+### What is verified
+- URL data: `train_urls.csv` is `(61720, 10)`, labels are `33575` legit and `28145` phishing, and splits are train `41430`, val `7393`, test `8037`, gov_test `4860`; all `61720` normalization checks passed.
+- Email data: `email_dataset.csv` is `(71945, 10)`, labels are `67308` legit and `4637` phishing, with train `57542`, val `7196`, test `7183`, golden `24`.
+- The feature list printed in the failed verification run contains all 21 required names in the required order; the run did not complete.
+- The URL report was last written 2026-10-26 12:29:29, before the Phase R commit on 2026-10-27. Its confusion matrices give PHISHING accuracy `0.8482`, legit FPR `1.1776%`, phishing recall `68.4566%`; SUSPICIOUS accuracy `0.8793`, legit FPR `15.0773%`, phishing recall `91.4463%`. The report names 9 gov_test Punycode false positives, all with probability `0.9983` to `0.9999`.
+- Government unit tests pass: `21 passed in 4.04s`. No Phase 3 category evaluation was run in this audit.
+
+### Fixes needed
+1. **HIGH** — `C:\Users\jayes\OneDrive\Desktop\project sem 5\new\url_model.cbm` (1,878,668 bytes) is not in the data specification and duplicates the artifact by name; remove/quarantine it only through an approved data-hygiene decision, never by editing DATA_DIR here.
+2. **HIGH** — `ml/url_model/artifacts_all/` contains a model and thresholds with no creator in current code; record provenance or discard it before use.
+3. **HIGH** — `ml/url_model/artifacts/feature_names.json` and the corresponding `artifacts_all` file are missing; training does not save them, so add persistence and enforce `model.feature_names_ == extractor.feature_names` at load.
+4. **HIGH** — `ml/url_model/train_and_evaluate.py` converts `tld` to categorical but has no top-50 TLD bucketing; implement the specified top-50/`other` mapping consistently in training and inference.
+5. **HIGH** — The URL report has 9 Punycode government false positives, while the verifier source does place the `.gov.in`/`.nic.in` suffix check before Punycode suspicion; integrate that verifier before ML so the rule is actually applied to raw URLs.
+6. **HIGH** — `ml/url_model/api.py` normalizes only for ML and no backend invokes the government verifier; preserve raw URL input for government rules and response while using normalized input only for features.
+7. **BLOCKER** — `backend/app/main.py` and `schemas.py` are placeholder comments, and no `/v1/analyze`, `/v1/url/check`, `/v1/email/check`, `/v1/feedback`, `/v1/blocklist`, or `/v1/health` routes exist; implement Phase 5.
+8. **HIGH** — `extension/src/api/client.ts` calls `/health`, `/predict-url`, `/predict-email`, `/government-check`, and `/explain`, none of which exist in the backend; align the client with the specified `/v1/*` API.
+9. **HIGH** — The extension requests `activeTab`, `tabs`, `storage`, `scripting`, `notifications` and host permissions `https://*/*`, `http://*/*`, broader than the specification; narrow permissions and supported-host matches.
+10. **BLOCKER** — `ml/email_model/train_modernbert.py` fails Python 3.13 AST parsing at line 342 (`for txt in X_test_sample := ...`); correct the syntax before any email training.
+11. **HIGH** — Email evidence is incomplete: only a baseline report exists, its leave-one-source-out rows are all `n/a`, and no ModernBERT result exists; complete the required comparison without using `label_raw`.
+12. **MEDIUM** — The feature helper contains a hard-coded old path `C:\Users\jayes\OneDrive\Desktop\pbl sem 5\new` while `ml/shared/config.py` uses the current project path; remove the stale duplicate path and centralize DATA_DIR.
+13. **MEDIUM** — The worktree has untracked reports, model artifacts, extension output, and `baseline_*.txt`, while build/cache/binary content is ignored; define git hygiene so generated artifacts are intentional and provenance is visible.
+14. **MEDIUM** — Torch is CPU-only (`2.14.1+cpu`) despite an RTX 4050 being present; choose a supported GPU/Colab path for ModernBERT or explicitly accept CPU limits.
+15. **MEDIUM** — `verify_features.py` fails after its successful feature assertions because the default Windows console cannot encode its separator; make verification output ASCII/UTF-8 so the Done-when check can pass.
+
+### Optimisations
+- **proposal — improve URL PHISHING recall**: the saved PHISHING threshold yields `68.4566%` recall at `1.1776%` legit FPR; tune calibration/validation selection to meet the <=1% constraint while measuring the tradeoff. Expected impact: fewer missed phishing URLs. Effort: medium.
+- **proposal — hyperparameter and calibration search**: the training script has no persisted calibrator despite the spec requiring calibration. Expected impact: more reliable probabilities and thresholds. Effort: medium.
+- **proposal — cache URL decisions**: the extension already has a latency-sensitive API flow; cache LOW for 6 hours and other results for 1 hour as specified. Expected impact: lower repeated-request latency and backend load. Effort: small.
+- **proposal — batch URL extraction/prediction**: the verified extractor processed 61,720 rows in 1.49s, so batching can preserve throughput when scanning email links. Expected impact: lower per-link overhead. Effort: small.
+- **proposal — compact blocklist index**: replace large linear lookup growth with a set first, then evaluate a Bloom filter if the list grows. Expected impact: lower memory and lookup cost. Effort: medium.
+- **proposal — fit email model to 6 GB GPU**: use batch size, sequence length, gradient accumulation, and mixed precision limits in the ModernBERT script. Expected impact: make the specified model runnable on the visible RTX 4050 or a comparable Colab GPU. Effort: medium.
+- **proposal — move REPO and `.venv` out of OneDrive**: both are currently synchronized paths. Expected impact: fewer file-lock/sync and latency surprises during builds and tests. Effort: small.
+- **proposal — CI/pre-commit checks**: run AST checks, `check_data.py`, feature verification, pytest, and route/schema checks without touching DATA_DIR. Expected impact: catch syntax, provenance, and API drift before handoff. Effort: medium.
+- **proposal — add focused tests**: add loader feature assertion, raw-versus-normalized URL routing, endpoint contract, threshold behavior, extension client paths, and Windows-safe verification output. Expected impact: prevent the current high-risk regressions. Effort: medium.
+
+### Risks and open decisions
+1. Model/serve mismatch can invert legitimate government URLs; reduce with the raw-URL verifier, feature manifest assertion, and split-safe tests.
+2. Missing backend contracts block extension and email integration; reduce with e2e tests and the specified `/v1/*` schema.
+3. Email model quality is unknown on the 24 golden rows and cross-source data; reduce with a valid baseline/ModernBERT comparison and labelled Indian-context data.
+4. OneDrive plus CPU-only Torch may make reproducibility and ModernBERT training unreliable; reduce by relocating and selecting a documented GPU path.
+5. Untracked/generated binaries and unknown `artifacts_all` provenance can make results unreproducible; reduce with explicit artifact manifests and git hygiene.
+
+Open decisions: backend hosting; email scope for v1; block versus banner; supported languages; collection of real Indian government phishing samples; labelling of the audit sample; and GPU/Colab plan for ModernBERT.
+
+### File map
+- `docs/SPEC.md`: source-of-truth plan and this handoff; edited only in this task.
+- `ml/shared/config.py`: DATA_DIR configuration; current default is the requested `new` folder.
+- `ml/shared/normalisation.py`: shared URL normalization; used by checks and URL API.
+- `ml/url_model/features.py`: 21 lexical features; contains a stale hard-coded test-helper path.
+- `ml/url_model/train_and_evaluate.py`: URL training/report writer; no feature manifest or top-50 bucketing.
+- `ml/url_model/api.py`: normalized URL feature prediction; no government integration.
+- `ml/url_model/artifacts/`: model and thresholds; feature manifest missing.
+- `ml/url_model/artifacts_all/`: duplicate model and thresholds; provenance unknown.
+- `government/gov_verifier.py`: rule-only verifier; unit-tested and suffix-before-Punycode logic is present.
+- `backend/app/`: placeholder main, schemas, and service init; API not started.
+- `ml/email_model/`: baseline artifacts/report present; ModernBERT script does not parse.
+- `extension/src/`: Plasmo source, extractors, popup and API client; endpoint and permission alignment pending.
+- `tests/test_gov_verifier.py`: 21 passing unit tests; `tests/e2e_test.py` is missing.
+- `data/reference/`: blocklist, evaluation set, and official-domain files; non-empty.
+- `new/`: DATA_DIR; contains the specified files plus `email_audit_sample.csv` and stray `url_model.cbm`.
+- `_quarantine/`: prior corrupted files plus `SPEC.md.before_handoff.bak`; the backup is the only file added by this handoff.
+- Stray/orphan items: `new/email_audit_sample.csv`, `new/url_model.cbm`, `ml/url_model/artifacts_all/`, generated extension build/cache/node_modules, `baseline_stdout.txt`, and `baseline_stderr.txt`.
+
+### Commands cheat sheet
+- `python scripts/check_data.py` — **verified** (`ALL CHECKS PASSED`).
+- `python scripts/verify_features.py` — **not verified**; feature assertions passed but Windows `UnicodeEncodeError` stopped the script.
+- `python ml/url_model/train_and_evaluate.py` — **not verified**; forbidden in this audit because it trains/writes artifacts.
+- `python -m pytest tests/e2e_test.py` — **not verified**; file is missing.
+- `uvicorn backend.app.main:app --reload` — **not verified**; backend is a placeholder and must not be started by this audit.
+- `cd extension; npm run dev` — **not verified**; extension was not built or started by this audit.
+
+### Do-not list
+- Do not write into DATA_DIR.
+- Do not train on test, gov_test, or golden rows.
+- Do not use `label_raw`.
+- Do not use shell redirection to create files.
+- Do not start a later phase before the current one is approved.
+- Do not touch the old project folder `pbl sem 5\AI-GovShield`.
+
+### Next action
+Run the permitted Phase 1 verification repair only: fix the Windows-safe output failure without changing DATA_DIR or feature behavior, then run `python scripts/verify_features.py`, paste its raw complete output including example rows and timing, and stop.
+
+Exact agent prompt: "Read docs/SPEC.md fully and follow its Rules for the agent. Do Phase 1 verification output repair only. Paste raw output for the verify_features Done-when checks and stop."
 
 -----SPEC END-----
