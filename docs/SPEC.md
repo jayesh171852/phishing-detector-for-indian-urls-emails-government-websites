@@ -82,7 +82,7 @@ Files: background service worker, contents/gmail.ts and contents/outlook.ts, pop
 
 ## Progress log and handoff
 
-Last updated: 2026-10-29 23:04:32 +05:30; implementation commits db71811 and 86702ae plus current backend/extension work.
+Last updated: 2026-10-30 00:55:47 +05:30; CUDA PyTorch installed locally; ModernBERT GPU run attempted but produced no artifacts.
 
 ### How to resume in a new IDE or agent
 1. Open `C:\Users\jayes\OneDrive\Desktop\project sem 5\AI-GovShield` as the workspace.
@@ -93,8 +93,8 @@ Last updated: 2026-10-29 23:04:32 +05:30; implementation commits db71811 and 867
 ### Environment facts
 - System and `.venv` Python: 3.13.2.
 - Key packages: catboost 1.2.10, shap 0.54.1, scikit-learn 1.9.1, pandas 3.1.0, numpy 2.5.4, fastapi 0.162.0, uvicorn 0.54.0, pydantic 2.14.1, transformers 5.20.2, onnxruntime 1.31.0, pytest 9.1.1, httpx 0.28.1.
-- Torch: 2.14.1+cpu; CUDA version `None`; `torch.cuda.is_available()` is `False`.
-- GPU visible to `nvidia-smi`: NVIDIA GeForce RTX 4050 Laptop GPU, 6141 MiB, driver 621.01.
+- Torch: 2.11.0+cu128; CUDA version `12.8`; `torch.cuda.is_available()` is `True`; one device detected.
+- GPU visible to PyTorch and `nvidia-smi`: NVIDIA GeForce RTX 4050 Laptop GPU, 6.0 GiB, driver 621.01.
 - C: free space reported: 294,203,031,552 bytes.
 - REPO and `.venv` are both under OneDrive: `C:\Users\jayes\OneDrive\Desktop\project sem 5\AI-GovShield`.
 
@@ -107,7 +107,7 @@ Last updated: 2026-10-29 23:04:32 +05:30; implementation commits db71811 and 867
 | 1 | VERIFIED | `verify_features.py` completed: 21 features, 61,720 rows, 1,000-row extraction `0.023s (PASS)`, example rows, and completion marker. | None for the current feature verifier. |
 | 2 | VERIFIED | Training completed; calibrated model, thresholds, `feature_names.json`, `tld_vocabulary.json`, and calibrator were written. | Improve the 9 government false positives through the backend verifier path; do not tune on gov_test. |
 | 3 | VERIFIED | `eval_gov.py`: 517 rows, 87.6% overall; `pytest`: 21 passed in 1.89s. | Improve verifier coverage for the 31 lookalike misses if approved. |
-| 4 | PARTIAL | Baseline completed with test PR-AUC `0.9265`, golden F1 `0.3529`, ham FPR `0.14%`, spam FPR `2.53%`, and CPU latency `5.22 ms/email`; ModernBERT parses and has a Colab path. | Run ModernBERT on GPU/Colab and compare against baseline before choosing the shipped model. |
+| 4 | PARTIAL | Baseline completed with test PR-AUC `0.9265`, golden F1 `0.3529`, ham FPR `0.14%`, spam FPR `2.53%`, and CPU latency `5.22 ms/email`; ModernBERT script parses and CUDA is available. GPU training was attempted after pre-tokenization optimization but was interrupted before any epoch/report/artifact output. | Rerun ModernBERT to completion and compare against baseline before choosing the shipped model. |
 | 5 | VERIFIED | `/v1/health`, `/v1/url/check`, `/v1/email/check`, `/v1/analyze`, `/v1/feedback`, and `/v1/blocklist` implemented; full pytest is `25 passed`; feature manifest assertion is active. | Add broader 100-row offline/API parity and p95 latency evidence. |
 | 6 | VERIFIED | Extension client calls `/v1/*`; `npm run type-check` passes and `npm run build` finishes successfully. | Browser-load verification remains manual. |
 | 7 | PARTIAL | Gmail/Outlook content scripts exist and email API is wired. | Verify opt-in webmail behavior in Chrome. |
@@ -119,9 +119,9 @@ Completion arithmetic: Phase 0 `5%` + Phase 1 `10%` + Phase 2 `15%` + Phase 3 `1
 ### What is verified
 - URL data: `train_urls.csv` is `(61720, 10)`, labels are `33575` legit and `28145` phishing, and splits are train `41430`, val `7393`, test `8037`, gov_test `4860`; all `61720` normalization checks passed.
 - Email data: `email_dataset.csv` is `(71945, 10)`, labels are `67308` legit and `4637` phishing, with train `57542`, val `7196`, test `7183`, golden `24`.
-- The feature list printed in the failed verification run contains all 21 required names in the required order; the run did not complete.
+- The repaired feature verifier completed: all 21 names were printed in required order, 61,720 rows extracted in 1.40s, example rows printed, and 1,000 rows extracted in 0.023s (`PASS`).
 - The URL report was last written 2026-10-26 12:29:29, before the Phase R commit on 2026-10-27. Its confusion matrices give PHISHING accuracy `0.8482`, legit FPR `1.1776%`, phishing recall `68.4566%`; SUSPICIOUS accuracy `0.8793`, legit FPR `15.0773%`, phishing recall `91.4463%`. The report names 9 gov_test Punycode false positives, all with probability `0.9983` to `0.9999`.
-- Government unit tests pass: `21 passed in 4.04s`. No Phase 3 category evaluation was run in this audit.
+- Government unit tests pass: `21 passed in 1.89s`; government evaluation completed for 517 rows with 87.6% overall accuracy.
 
 ### Fixes needed
 1. **HIGH** — `C:\Users\jayes\OneDrive\Desktop\project sem 5\new\url_model.cbm` (1,878,668 bytes) is not in the data specification and duplicates the artifact by name; remove/quarantine it only through an approved data-hygiene decision, never by editing DATA_DIR here.
@@ -133,12 +133,11 @@ Completion arithmetic: Phase 0 `5%` + Phase 1 `10%` + Phase 2 `15%` + Phase 3 `1
 7. **BLOCKER** — `backend/app/main.py` and `schemas.py` are placeholder comments, and no `/v1/analyze`, `/v1/url/check`, `/v1/email/check`, `/v1/feedback`, `/v1/blocklist`, or `/v1/health` routes exist; implement Phase 5.
 8. **HIGH** — `extension/src/api/client.ts` calls `/health`, `/predict-url`, `/predict-email`, `/government-check`, and `/explain`, none of which exist in the backend; align the client with the specified `/v1/*` API.
 9. **HIGH** — The extension requests `activeTab`, `tabs`, `storage`, `scripting`, `notifications` and host permissions `https://*/*`, `http://*/*`, broader than the specification; narrow permissions and supported-host matches.
-10. **BLOCKER** — `ml/email_model/train_modernbert.py` fails Python 3.13 AST parsing at line 342 (`for txt in X_test_sample := ...`); correct the syntax before any email training.
+10. **MEDIUM** — ModernBERT now parses and CUDA is available, but a full 57,542-row GPU run has not produced an epoch/report/artifact; rerun to completion and inspect the first epoch progress.
 11. **HIGH** — Email evidence is incomplete: only a baseline report exists, its leave-one-source-out rows are all `n/a`, and no ModernBERT result exists; complete the required comparison without using `label_raw`.
 12. **MEDIUM** — The feature helper contains a hard-coded old path `C:\Users\jayes\OneDrive\Desktop\pbl sem 5\new` while `ml/shared/config.py` uses the current project path; remove the stale duplicate path and centralize DATA_DIR.
 13. **MEDIUM** — The worktree has untracked reports, model artifacts, extension output, and `baseline_*.txt`, while build/cache/binary content is ignored; define git hygiene so generated artifacts are intentional and provenance is visible.
-14. **MEDIUM** — Torch is CPU-only (`2.14.1+cpu`) despite an RTX 4050 being present; choose a supported GPU/Colab path for ModernBERT or explicitly accept CPU limits.
-15. **MEDIUM** — `verify_features.py` fails after its successful feature assertions because the default Windows console cannot encode its separator; make verification output ASCII/UTF-8 so the Done-when check can pass.
+14. **LOW** — The local environment now uses `torch==2.11.0+cu128`; keep this CUDA pin synchronized with the supported Python environment.
 
 ### Optimisations
 - **proposal — improve URL PHISHING recall**: the saved PHISHING threshold yields `68.4566%` recall at `1.1776%` legit FPR; tune calibration/validation selection to meet the <=1% constraint while measuring the tradeoff. Expected impact: fewer missed phishing URLs. Effort: medium.
@@ -196,8 +195,8 @@ Open decisions: backend hosting; email scope for v1; block versus banner; suppor
 - Do not touch the old project folder `pbl sem 5\AI-GovShield`.
 
 ### Next action
-Run the ModernBERT script on a GPU/Colab environment, then paste its raw comparison output and stop before selecting the shipped email model.
+Rerun the optimized ModernBERT training on the verified CUDA environment, capture epoch progress, and complete the report before selecting the shipped email model.
 
-Exact agent prompt: "Read docs/SPEC.md fully and follow its Rules for the agent. Run only the ModernBERT email comparison on GPU/Colab, paste raw output for the Email Done-when checks, and stop."
+Exact agent prompt: "Read docs/SPEC.md fully and follow its Rules for the agent. Run only the ModernBERT email comparison on the local CUDA environment, paste raw epoch/report output for the Email Done-when checks, and stop."
 
 -----SPEC END-----

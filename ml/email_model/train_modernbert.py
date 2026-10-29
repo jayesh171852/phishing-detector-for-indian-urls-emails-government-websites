@@ -96,26 +96,25 @@ print(f"  train={len(train_df)}  val={len(val_df)}  test={len(test_df)}  golden=
 # ── Dataset ───────────────────────────────────────────────────────────────────
 class EmailDataset(Dataset):
     def __init__(self, texts, labels, tokenizer, max_len):
-        self.texts     = list(texts)
-        self.labels    = list(labels)
-        self.tokenizer = tokenizer
-        self.max_len   = max_len
-
-    def __len__(self):
-        return len(self.texts)
-
-    def __getitem__(self, idx):
-        enc = self.tokenizer(
-            self.texts[idx],
-            max_length=self.max_len,
+        encoded = tokenizer(
+            list(texts),
+            max_length=max_len,
             truncation=True,
             padding="max_length",
             return_tensors="pt",
         )
+        self.input_ids = encoded["input_ids"]
+        self.attention_mask = encoded["attention_mask"]
+        self.labels = torch.as_tensor(list(labels), dtype=torch.long)
+
+    def __len__(self):
+        return len(self.labels)
+
+    def __getitem__(self, idx):
         return {
-            "input_ids":      enc["input_ids"].squeeze(0),
-            "attention_mask": enc["attention_mask"].squeeze(0),
-            "label":          torch.tensor(self.labels[idx], dtype=torch.long),
+            "input_ids": self.input_ids[idx],
+            "attention_mask": self.attention_mask[idx],
+            "label": self.labels[idx],
         }
 
 # ── Tokeniser + Model ─────────────────────────────────────────────────────────

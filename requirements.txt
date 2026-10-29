@@ -13,6 +13,6 @@ loguru
 pytest
 httpx
 joblib
-torch
+torch==2.11.0+cu128
 transformers>=4.48
 onnxruntime
