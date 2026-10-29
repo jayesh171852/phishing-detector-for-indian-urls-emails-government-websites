@@ -12,6 +12,7 @@ idna
 loguru
 pytest
 httpx
+joblib
 torch
 transformers>=4.48
 onnxruntime

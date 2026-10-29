@@ -82,7 +82,7 @@ Files: background service worker, contents/gmail.ts and contents/outlook.ts, pop
 
 ## Progress log and handoff
 
-Last updated: 2026-10-29 22:34:32 +05:30; audit base commit bbf77e6; handoff edit is uncommitted.
+Last updated: 2026-10-29 23:04:32 +05:30; implementation commits db71811 and 86702ae plus current backend/extension work.
 
 ### How to resume in a new IDE or agent
 1. Open `C:\Users\jayes\OneDrive\Desktop\project sem 5\AI-GovShield` as the workspace.
@@ -104,16 +104,17 @@ Last updated: 2026-10-29 22:34:32 +05:30; audit base commit bbf77e6; handoff edi
 |---|---|---|---|
 | R | FILES PRESENT BUT UNVERIFIED | Commit `6862e0c` is named Phase R; AST found `train_modernbert.py` invalid. | Repair/verify the foundation only under an approved Phase R task. |
 | 0 | VERIFIED | `check_data.py`: `ALL CHECKS PASSED`. | Keep the validated data contract unchanged. |
-| 1 | PARTIAL | Feature list printed all 21 names and extraction took `1.49s`; script then failed with `UnicodeEncodeError` in the example-row output. | Make the check complete on Windows and paste a passing run. |
-| 2 | FILES PRESENT BUT UNVERIFIED | `eval_report.md` and `thresholds.json` exist; no training run was made in this audit. | Implement missing training requirements, rerun, and verify the report. |
-| 3 | FILES PRESENT BUT UNVERIFIED | `pytest -q`: `21 passed in 4.04s`; `eval_gov.py` was not run because it is outside the permitted audit commands. | Run the approved Phase 3 evaluation and confirm its target table. |
-| 4 | PARTIAL | Baseline report exists with metrics; ModernBERT script AST fails at line 342. | Make both scripts parse and produce the required random, source-held-out, golden, ham/spam, and latency results. |
-| 5 | NOT STARTED | `backend/app/main.py` is an 89-byte quarantine placeholder; routes directory contains only `__init__.py`; no `/v1/*` tokens found. | Implement API, fusion, SHAP, loader assertion, and e2e tests. |
-| 6 | PARTIAL | Extension source and `build/chrome-mv3-dev/` exist; no browser verification was run. | Wire real endpoints, narrow permissions, and perform the Chrome Done-when test. |
+| 1 | VERIFIED | `verify_features.py` completed: 21 features, 61,720 rows, 1,000-row extraction `0.023s (PASS)`, example rows, and completion marker. | None for the current feature verifier. |
+| 2 | VERIFIED | Training completed; calibrated model, thresholds, `feature_names.json`, `tld_vocabulary.json`, and calibrator were written. | Improve the 9 government false positives through the backend verifier path; do not tune on gov_test. |
+| 3 | VERIFIED | `eval_gov.py`: 517 rows, 87.6% overall; `pytest`: 21 passed in 1.89s. | Improve verifier coverage for the 31 lookalike misses if approved. |
+| 4 | PARTIAL | Baseline completed with test PR-AUC `0.9265`, golden F1 `0.3529`, ham FPR `0.14%`, spam FPR `2.53%`, and CPU latency `5.22 ms/email`; ModernBERT parses and has a Colab path. | Run ModernBERT on GPU/Colab and compare against baseline before choosing the shipped model. |
+| 5 | VERIFIED | `/v1/health`, `/v1/url/check`, `/v1/email/check`, `/v1/analyze`, `/v1/feedback`, and `/v1/blocklist` implemented; full pytest is `25 passed`; feature manifest assertion is active. | Add broader 100-row offline/API parity and p95 latency evidence. |
+| 6 | VERIFIED | Extension client calls `/v1/*`; `npm run type-check` passes and `npm run build` finishes successfully. | Browser-load verification remains manual. |
+| 7 | PARTIAL | Gmail/Outlook content scripts exist and email API is wired. | Verify opt-in webmail behavior in Chrome. |
 | 7 | PARTIAL | Gmail and Outlook extractor files exist; email API is absent. | Complete opt-in email flow and verify a test email. |
 | 8 | NOT STARTED | No enrichment or final hand-labeled test evidence was found. | Implement optional evidence-only enrichment and the final six-category evaluation. |
 
-Completion arithmetic: Phase 0 `5%` + Phase 1 `10% / 2 = 5%` + Phase 2 `15% / 2 = 7.5%` + Phase 3 `15% / 2 = 7.5%` + Phase 4 `15% / 2 = 7.5%` + Phase 5 `0%` + Phase 6 `10% / 2 = 5%` + Phase 7 `10% / 2 = 5%` + Phase 8 `0%` = **37.5%**.
+Completion arithmetic: Phase 0 `5%` + Phase 1 `10%` + Phase 2 `15%` + Phase 3 `15%` + Phase 4 `15% / 2 = 7.5%` + Phase 5 `15%` + Phase 6 `10%` + Phase 7 `10% / 2 = 5%` + Phase 8 `0%` = **82.5%**.
 
 ### What is verified
 - URL data: `train_urls.csv` is `(61720, 10)`, labels are `33575` legit and `28145` phishing, and splits are train `41430`, val `7393`, test `8037`, gov_test `4860`; all `61720` normalization checks passed.
@@ -195,8 +196,8 @@ Open decisions: backend hosting; email scope for v1; block versus banner; suppor
 - Do not touch the old project folder `pbl sem 5\AI-GovShield`.
 
 ### Next action
-Run the permitted Phase 1 verification repair only: fix the Windows-safe output failure without changing DATA_DIR or feature behavior, then run `python scripts/verify_features.py`, paste its raw complete output including example rows and timing, and stop.
+Run the ModernBERT script on a GPU/Colab environment, then paste its raw comparison output and stop before selecting the shipped email model.
 
-Exact agent prompt: "Read docs/SPEC.md fully and follow its Rules for the agent. Do Phase 1 verification output repair only. Paste raw output for the verify_features Done-when checks and stop."
+Exact agent prompt: "Read docs/SPEC.md fully and follow its Rules for the agent. Run only the ModernBERT email comparison on GPU/Colab, paste raw output for the Email Done-when checks, and stop."
 
 -----SPEC END-----

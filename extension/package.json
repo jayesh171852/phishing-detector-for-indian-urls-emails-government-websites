@@ -1,0 +1,52 @@
+{
+  "name": "safeclick",
+  "displayName": "SafeClick",
+  "version": "1.0.0",
+  "description": "AI-powered phishing protection - detect malicious URLs, fake government websites, and email scams in real-time.",
+  "private": true,
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx --fix"
+  },
+  "dependencies": {
+    "clsx": "2.1.1",
+    "lucide-react": "0.395.0",
+    "plasmo": "0.89.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.268",
+    "@types/node": "20.14.8",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "7.14.1",
+    "@typescript-eslint/parser": "7.14.1",
+    "eslint": "8.57.0",
+    "eslint-plugin-react": "7.34.3",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "typescript": "5.5.2"
+  },
+  "manifest": {
+    "host_permissions": [
+      "http://localhost:8000/*",
+      "https://mail.google.com/*",
+      "https://outlook.live.com/*",
+      "https://outlook.office.com/*",
+      "https://outlook.office365.com/*"
+    ],
+    "permissions": [
+      "tabs",
+      "storage",
+      "webNavigation",
+      "alarms"
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }
+}
