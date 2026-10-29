@@ -70,7 +70,7 @@ test_urls = [
     "https://google.com",
 ]
 
-print("\n── Example feature rows ─────────────────────────────────────────────────")
+print("\n=== Example feature rows ===")
 for raw in test_urls:
     url_n = norm(raw)
     row_df = pd.DataFrame({"url_norm": [url_n]})
@@ -81,7 +81,7 @@ for raw in test_urls:
         print(f"    {fname:<22} = {row_feats[fname]}")
 
 # ── Speed on 1,000 rows ──────────────────────────────────────────────────────
-print("\n── Speed test (1,000 rows) ──────────────────────────────────────────────")
+print("\n=== Speed test (1,000 rows) ===")
 df1k = df.head(1000)
 t1 = time.time()
 _ = extract_features(df1k)
