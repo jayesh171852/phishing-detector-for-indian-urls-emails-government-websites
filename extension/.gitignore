@@ -1,0 +1,7 @@
+node_modules/
+.plasmo/
+build/
+dist/
+*.tsbuildinfo
+.cache/
+public/icon*.png
