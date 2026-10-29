@@ -69,6 +69,7 @@ parser.add_argument("--weight_decay",type=float, default=0.01)
 parser.add_argument("--patience",   type=int, default=2,
                     help="Early stopping patience (epochs without val PR-AUC improvement)")
 args = parser.parse_args()
+loader_workers = 0 if os.name == "nt" else 2
 
 OUTPUT_DIR = Path(args.output_dir)
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -130,10 +131,10 @@ val_ds   = EmailDataset(val_df["text"].fillna(""),   val_df["label"],   tokenize
 test_ds  = EmailDataset(test_df["text"].fillna(""),  test_df["label"],  tokenizer, args.max_len)
 gold_ds  = EmailDataset(golden_df["text"].fillna(""), golden_df["label"], tokenizer, args.max_len)
 
-train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True,  num_workers=2)
-val_loader   = DataLoader(val_ds,   batch_size=args.batch_size, shuffle=False, num_workers=2)
-test_loader  = DataLoader(test_ds,  batch_size=args.batch_size, shuffle=False, num_workers=2)
-gold_loader  = DataLoader(gold_ds,  batch_size=args.batch_size, shuffle=False, num_workers=2)
+train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True,  num_workers=loader_workers)
+val_loader   = DataLoader(val_ds,   batch_size=args.batch_size, shuffle=False, num_workers=loader_workers)
+test_loader  = DataLoader(test_ds,  batch_size=args.batch_size, shuffle=False, num_workers=loader_workers)
+gold_loader  = DataLoader(gold_ds,  batch_size=args.batch_size, shuffle=False, num_workers=loader_workers)
 
 # ── Optimizer + Scheduler ─────────────────────────────────────────────────────
 total_steps   = (len(train_loader) // args.grad_accum) * args.epochs
@@ -330,7 +331,7 @@ for src in df["source"].unique():
         loso.append(dict(source=src, n=len(held), prauc=float("nan"), note="single class"))
         continue
     ds_h  = EmailDataset(held["text"].fillna(""), held["label"], tokenizer, args.max_len)
-    ld_h  = DataLoader(ds_h, batch_size=args.batch_size, shuffle=False, num_workers=2)
+    ld_h  = DataLoader(ds_h, batch_size=args.batch_size, shuffle=False, num_workers=loader_workers)
     r_h   = _eval_loader(ld_h, src)
     loso.append(dict(source=src, n=len(held), prauc=r_h["prauc"], note="inference-only LOSO"))
     print(f"  {src}: PR-AUC={r_h['prauc']:.4f} (n={len(held)})", flush=True)
