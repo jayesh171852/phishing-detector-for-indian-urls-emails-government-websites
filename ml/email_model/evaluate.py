@@ -1,1 +1,1 @@
-" > ml\email_model\train_modernbert.py && echo "  
+# QUARANTINED — original was corrupted. See _quarantine/evaluate.py. Replaced in Phase R.

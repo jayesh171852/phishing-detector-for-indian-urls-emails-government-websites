@@ -13,3 +13,14 @@ extension/.env
 *.csv
 *.csv.*
 !data/reference/*.csv
+!data/email/
+!data/email/**
+ml/email_model/artifacts/ckpt/
+ml/email_model/artifacts/ckpt_augmented/
+ml/email_model/artifacts/modernbert/
+ml/email_model/artifacts/modernbert_augmented/
+ml/email_model/artifacts/*.bin
+ml/email_model/artifacts/*.safetensors
+ml/email_model/artifacts/*.pt
+ml/email_model/artifacts/*.log
+ml/email_model/artifacts/*.bak

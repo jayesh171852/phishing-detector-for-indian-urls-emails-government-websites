@@ -1,0 +1,59 @@
+Loading email_dataset.csv …
+  train=57542  val=7196  test=7183  golden=24
+Fitting TF-IDF …
+Training Logistic Regression + isotonic calibration …
+  Training time: 4.9s
+  Thresholds — phishing: 0.5755  suspicious: 0.7278
+Artifacts saved to C:\Users\jayes\OneDrive\Desktop\project sem 5\AI-GovShield\ml\email_model\artifacts
+CPU latency (baseline): 4.59 ms/email
+Running leave-one-source-out …
+
+Report written to C:\Users\jayes\OneDrive\Desktop\project sem 5\AI-GovShield\ml\email_model\baseline_report.md
+
+# Email Baseline Report (TF-IDF + Logistic Regression)
+
+## Test-split metrics
+- ROC AUC:   0.9939
+- PR AUC:    0.9012
+- Precision (PHISHING thr): 0.8408
+- Recall    (PHISHING thr): 0.9580
+- F1        (PHISHING thr): 0.8956
+
+### Confusion matrix (PHISHING threshold)
+```
+[[6649   82]
+ [  19  433]]
+```
+
+### False-positive rates on test
+- Ham  FPR: 0.0008  (0.08%)
+- Spam FPR: 0.0259  (2.59%)
+
+## Golden-set metrics (24 hand-written Indian-context emails)
+- ROC AUC: 0.5174
+- PR AUC:  0.6041
+- F1:      0.2500
+
+### Confusion matrix (golden)
+```
+[[10  2]
+ [10  2]]
+```
+
+## Leave-one-source-out PR-AUC
+| Source | N | PR-AUC | Note |
+|--------|---|--------|------|
+| Enron | 27256 | n/a | single class |
+| CEAS_08 | 31614 | n/a | single class |
+| SpamAssasin | 5598 | n/a | single class |
+| Nigerian_Fraud | 3125 | n/a | single class |
+| Nazario | 1500 | n/a | single class |
+| Ling | 2828 | n/a | single class |
+
+## Latency
+- CPU latency (TF-IDF + LR): 4.59 ms/email
+
+## Thresholds
+- phishing_threshold:   0.575543
+- suspicious_threshold: 0.727778
+
